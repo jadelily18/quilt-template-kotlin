@@ -1,25 +1,33 @@
 {
 	"schema_version": 1,
 	"quilt_loader": {
-		"group": "com.example",
-		"id": "example_mod",
+		"group": "com.lilydev",
+		"id": "template_mod",
 		"version": "${version}",
 		"metadata": {
-			"name": "Mod Name",
-			"description": "A short description of your mod.",
+			"name": "Template Mod",
+			"description": "This is a template mod!",
 			"contributors": {
-				"Your name here": "Owner"
+				"jadelily18": "Owner"
 			},
 			"contact": {
-				"homepage": "https://example.com/",
-				"issues": "https://github.com/QuiltMC/quilt-template-mod/issues",
-				"sources": "https://github.com/QuiltMC/quilt-template-mod"
+				"homepage": "https://lilydev.com/",
+				"issues": "https://github.com/jadelily18/quilt-template-kotlin/issues",
+				"sources": "https://github.com/jadelily18/quilt-template-kotlin"
 			},
+			"license": "LGPL-3.0",
 			"icon": "assets/example_mod/icon.png"
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
-			"init": "com.example.example_mod.ExampleMod"
+			"init": {
+				"adapter": "kotlin",
+				"value": "com.lilydev.example_mod.ExampleMod"
+			},
+			"modmenu": {
+				"adapter": "kotlin",
+				"value": "com.lilydev.example_mod.integrations.ModMenuImpl"
+			}
 		},
 		"depends": [
 			{
@@ -35,6 +43,12 @@
 				"versions": ">=1.19.2"
 			}
 		]
+	},
+	"modmenu": {
+		"links": {
+			"modmenu.discord": "https://discord.gg/TZAt4PA5av",
+			"modmenu.kofi": "https://ko-fi.com/jadelily"
+		}
 	},
 	"mixin": "example_mod.mixins.json"
 }
